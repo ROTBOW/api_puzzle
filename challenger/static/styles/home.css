@@ -1,0 +1,14 @@
+* {
+    background-color: black;
+    color: greenyellow;
+    font-size: large;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+/* p {
+    background-color: gray;
+} */
