@@ -1,10 +1,17 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'styles/home.css' %}">
+<head>
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/crt.css' %}">
+    <title>Challenger</title>
+</head>
 
-<body>
-    <div>
-        hey there soul sister!
-        There once was a man that like to sing, he sang until his sagged down like kelp!
+<body class="crt">
+    <div class="main-body">
+        <h1>Welcome Challenger</h1>
+        <p>
+            Beat the challenge<br/>
+            call this api /&lt;yourEmail&gt; to start the challenge
+        </p>
     </div>
 </body>
