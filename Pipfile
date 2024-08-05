@@ -8,6 +8,7 @@ django = "*"
 gunicorn = "*"
 
 [dev-packages]
+isort = "*"
 
 [requires]
 python_version = "3.10"

@@ -26,5 +26,3 @@ def c_cipher(text: str, rotations: int, direction: bool = True) -> str:
 
     # after the loop ends, return the list joined into a string
     return ''.join(text)
-    
-    
