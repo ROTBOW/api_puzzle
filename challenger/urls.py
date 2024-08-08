@@ -22,5 +22,6 @@ from .views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('gate1/', include('breaker.urls')),
+    # path('leaderboard', views.leaderboard),
     path('', home)
 ]

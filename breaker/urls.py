@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('ping', views.ping, name='ping-gate-1'),
-    # path('leaderboard', views.leaderboard),
+    path('restart/<email>', views.restart),
     path('<email>', views.start),
     path('<email>/<ans>', views.attempt),
 ]
