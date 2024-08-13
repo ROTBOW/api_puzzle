@@ -11,6 +11,8 @@ def time_till_expires(expires) -> str:
     
     return str(delta)
 
+
 def create_hash(string: str) -> str:
     hashed_str = sha256(string.encode('utf-8'))
+    
     return hashed_str.hexdigest()

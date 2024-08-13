@@ -1,11 +1,17 @@
 '''
 impletation of the caesar cipher
-nothing fancy, an example input from the api would be:
-
+nothing fancy
+Author: ROTBOW
+Date: July 30th, 2024
 '''
 from string import ascii_lowercase
 
 def c_cipher(text: str, rotations: int, direction: bool = True) -> str:
+    """
+        Both encoder and decoder for caesar cipher,
+        just need to change the args depending on which you are
+        doing.
+    """
     # clean our input text and turn it into a list
     text = list(text.strip().lower())
     # neg our rotations if our direction isn't forwards(true)

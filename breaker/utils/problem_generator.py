@@ -4,7 +4,7 @@ from random import randint
 from .utils import create_hash
 
 
-def caesar() -> tuple[str]:
+def caesar() -> tuple[str, str, str]:
     n = randint(100, 1000)
     # creating the problem string as an list, will convert it to string before shiping it off
     problem_str = list()
@@ -14,7 +14,7 @@ def caesar() -> tuple[str]:
 
     # hash the ans and write the hint
     problem_str = ''.join(problem_str)
-    print('pure ans:', problem_str[:15])
+    
     hashed_ans = create_hash(problem_str)
     hint = f'Caesar: first correct letter is {problem_str[0]}'
     
@@ -23,7 +23,7 @@ def caesar() -> tuple[str]:
     
     return hint, problem, hashed_ans
 
-def gen_problem(gate: int) -> tuple[str]:
+def gen_problem(gate: int) -> tuple[str, str, str]:
     # this will call another func to gen that func's problem
     # each func will return a hint, the problem string and a hashed version of their answer
     # returned as a tuple
@@ -32,6 +32,6 @@ def gen_problem(gate: int) -> tuple[str]:
     }.get(gate, None)
     
     if not problem:
-        return 'eh just return 1', '1'
+        return 'eh just return 1', '1', create_hash('1')
     
     return problem()
