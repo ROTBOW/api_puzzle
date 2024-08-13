@@ -6,14 +6,14 @@ Date: July 30th, 2024
 '''
 from string import ascii_lowercase
 
-def c_cipher(text: str, rotations: int, direction: bool = True) -> str:
+def c_cipher(imp_text: str, rotations: int, direction: bool = True) -> str:
     """
         Both encoder and decoder for caesar cipher,
         just need to change the args depending on which you are
         doing.
     """
     # clean our input text and turn it into a list
-    text = list(text.strip().lower())
+    text = list(imp_text.strip().lower())
     # neg our rotations if our direction isn't forwards(true)
     if not direction:
         rotations *= -1
