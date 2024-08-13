@@ -33,7 +33,7 @@ def start(req, email) -> JsonResponse:
         apt.save()
         
         return JsonResponse({
-            'curr_gate': 1,
+            'curr_gate': apt.gate,
             'hint': hint,
             'problem_str': problem,
             'expires': time_till_expires(apt.expires)
